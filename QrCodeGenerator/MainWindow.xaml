@@ -1,0 +1,33 @@
+﻿<Window x:Class="QrCodeGenerator.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:QrCodeGenerator"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid>
+        <Grid Margin="0,0,0,10" Height="92" VerticalAlignment="Bottom">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="6*"/>
+                <ColumnDefinition Width="8*"/>
+                <ColumnDefinition Width="2*"/>
+                <ColumnDefinition Width="8*"/>
+                <ColumnDefinition Width="6*"/>
+            </Grid.ColumnDefinitions>
+            <Button x:Name="EncodeBtn" Content="Encode" Margin="0,46,0,0" Grid.Column="1" Height="32" VerticalAlignment="Top" Click="EncodeBtn_Click"/>
+            <Button x:Name="SaveBtn" Content="Save" Margin="0,46,0,0" Grid.Column="3" Height="32" VerticalAlignment="Top" Click="SaveBtn_Click"/>
+            <TextBox x:Name="DataTb" Margin="107,10,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Grid.Column="1" Grid.ColumnSpan="3"/>
+            <Label Content="Text/Uri" Grid.Column="1" Margin="0,6,106,0" VerticalAlignment="Top"/>
+        </Grid>
+        <Grid Margin="115,80,115,141">
+            <Rectangle Stroke="Black"/>
+            <RadioButton x:Name="PayLoadTypeUrlRad" Content="URL" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top"/>
+            <RadioButton x:Name="PayLoadTypeSmsRad" Content="SMS" HorizontalAlignment="Left" Margin="10,30,0,0" VerticalAlignment="Top"/>
+            <RadioButton x:Name="PayLoadTypeWifiRad" Content="WIFI" HorizontalAlignment="Left" Margin="10,50,0,0" VerticalAlignment="Top"/>
+            <RadioButton x:Name="PayLoadTypeWathsappMessageRad" Content="WhatsappMessage" HorizontalAlignment="Left" Margin="10,70,0,0" VerticalAlignment="Top"/>
+            <RadioButton x:Name="PayLoadTypeGeoLocRad" Content="GeoLocation" HorizontalAlignment="Left" Margin="10,90,0,0" VerticalAlignment="Top" IsEnabled="False"/>
+        </Grid>
+
+    </Grid>
+</Window>
